@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mpdf-reader"
+version = "0.1.0"
+description = "MPDF Reader — Extract Markdown from .mpdf files for AI ingestion"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.9"
+authors = [
+    { name = "MPDF Project" },
+]
+keywords = ["mpdf", "markdown", "document", "ai", "rag", "reader"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Text Processing :: Markup :: Markdown",
+]
+
+[project.urls]
+Homepage = "https://mpdf.ai"
+Repository = "https://github.com/jbeltran73-2/mpdf"
+
+[tool.hatch.build.targets.wheel]
+packages = ["."]

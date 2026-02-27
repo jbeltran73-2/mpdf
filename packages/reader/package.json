@@ -1,0 +1,29 @@
+{
+  "name": "@mpdf/reader",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@mpdf/core": "workspace:*",
+    "yauzl": "^3"
+  },
+  "devDependencies": {
+    "@types/yauzl": "^2",
+    "archiver": "^7",
+    "@types/archiver": "^6"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "@mpdf/compiler",
+  "version": "0.1.0",
+  "type": "module",
+  "bin": {
+    "mpdf": "./dist/cli.js"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": ["dist", "assets"],
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "dev": "tsup --watch"
+  },
+  "dependencies": {
+    "@mpdf/core": "workspace:*",
+    "archiver": "^7",
+    "chalk": "^5",
+    "commander": "^12",
+    "glob": "^11",
+    "gray-matter": "^4",
+    "markdown-it": "^14",
+    "markdown-it-footnote": "^4",
+    "markdown-it-task-lists": "^2",
+    "shiki": "^3",
+    "yauzl": "^3"
+  },
+  "devDependencies": {
+    "@types/archiver": "^6",
+    "@types/markdown-it": "^14",
+    "@types/yauzl": "^2"
+  }
+}
